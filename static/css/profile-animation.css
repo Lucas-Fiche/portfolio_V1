@@ -1,0 +1,142 @@
+/* Animação de tinta para a foto de perfil */
+
+.profile-img {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: visible; /* Importante para permitir que a animação ultrapasse o círculo */
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+.profile-img-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    border: 4px solid #10b5ce;
+}
+
+/* Animação de tinta */
+.profile-img::before,
+.profile-img::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: rgba(16, 181, 206, 0.4);
+    z-index: -1;
+    transform: scale(1);
+    animation: ink-splash 8s infinite ease-in-out;
+}
+
+.profile-img::after {
+    animation-delay: -4s;
+    background-color: rgba(16, 181, 206, 0.2);
+}
+
+@keyframes ink-splash {
+    0%, 100% {
+        transform: scale(1);
+        border-radius: 50%;
+    }
+    
+    33% {
+        transform: scale(1.1);
+        border-radius: 60% 40% 70% 30% / 30% 50% 70% 60%;
+    }
+    
+    66% {
+        transform: scale(1.15);
+        border-radius: 40% 60% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+/* Efeito de partículas (bolhas) */
+.ink-bubble {
+    position: absolute;
+    background-color: rgba(16, 181, 206, 0.5);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ink-bubble:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    bottom: 10%;
+    left: 20%;
+    animation: bubble-float 10s infinite ease-in-out;
+}
+
+.ink-bubble:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    bottom: 5%;
+    right: 20%;
+    animation: bubble-float 7s infinite ease-in-out 1s;
+}
+
+.ink-bubble:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    top: 15%;
+    left: 10%;
+    animation: bubble-float 9s infinite ease-in-out 2s;
+}
+
+.ink-bubble:nth-child(4) {
+    width: 12px;
+    height: 12px;
+    top: 10%;
+    right: 10%;
+    animation: bubble-float 8s infinite ease-in-out 3s;
+}
+
+@keyframes bubble-float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    
+    20% {
+        opacity: 0.7;
+    }
+    
+    100% {
+        transform: translateY(-100px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .profile-img-container,
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-img-container,
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+}
