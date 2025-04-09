@@ -5,20 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Fiche - Portfólio</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/about.css">
+    <link rel="stylesheet" href="../static/css/projects.css">
+    <link rel="stylesheet" href="../static/css/experiences.css">
+    <link rel="stylesheet" href="../static/css/skills.css">
+    <link rel="stylesheet" href="../static/css/top-navbar.css">
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Barra de navegação superior (inicialmente oculta) -->
+    <!-- Barra de navegação superior modernizada (corrigida) -->
     <nav class="top-navbar" id="top-navbar">
         <div class="top-navbar-content">
-            <div class="logo">Lucas Fiche</div>
-            <div class="social-icons">
-                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <div class="logo">
+                <a href="index.html">Lucas Fiche</a>
+            </div>
+            <div class="social-icons-navbar">
+                <a href="mailto:seu-email@exemplo.com" class="social-icon-link" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://instagram.com/seuperfil" class="social-icon-link" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/seuperfil" class="social-icon-link" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/seuperfil" class="social-icon-link" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
             </div>
         </div>
     </nav>
@@ -40,7 +55,7 @@
             <section id="about" class="section about-section">
                 <div class="about-centered">
                     <div class="profile-img">
-                        <img src="images/foto_perfil_sprint.jpeg" alt="Lucas Fiche">
+                        <img src="../static/img/profile.jpg" alt="Lucas Fiche">
                     </div>
                     
                     <h1 class="name">Lucas Fiche</h1>
@@ -76,11 +91,9 @@
                             </div>
                         </div>
                         
-                        <div class="about-divider-horizontal"></div>
-                        
                         <div class="about-cta">
                             <a href="certificates.html" class="btn-primary">Certificates</a>
-                            <a href="#" class="btn-primary"><i class="fas fa-download"></i> Download CV</a>
+                            <a href="../static/docs/resume.pdf" class="btn-primary"><i class="fas fa-download"></i> Download CV</a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +105,7 @@
                 <div class="projects-container">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="/api/placeholder/400/320" alt="Projeto 1">
+                            <img src="../static/img/projects/project1.jpg" alt="Projeto 1">
                         </div>
                         <div class="project-info">
                             <h3 class="project-title">Projeto 1</h3>
@@ -107,7 +120,7 @@
 
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="/api/placeholder/400/320" alt="Projeto 2">
+                            <img src="../static/img/projects/project2.jpg" alt="Projeto 2">
                         </div>
                         <div class="project-info">
                             <h3 class="project-title">Projeto 2</h3>
@@ -123,7 +136,7 @@
 
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="/api/placeholder/400/320" alt="Projeto 3">
+                            <img src="../static/img/projects/project3.jpg" alt="Projeto 3">
                         </div>
                         <div class="project-info">
                             <h3 class="project-title">Projeto 3</h3>
@@ -333,10 +346,10 @@
             &copy; 2025 Lucas Fiche. All rights reserved.
         </div>
     </footer>
-        </div>
-    </div>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/typing-effect.js"></script>
+    <script src="../static/js/scroll-nav.js"></script>
 </body>
 </html>

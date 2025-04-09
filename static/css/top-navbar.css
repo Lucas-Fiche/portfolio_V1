@@ -1,0 +1,136 @@
+/* Estilos modernos para a barra de navegação superior */
+
+/* Container principal da navbar */
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(5, 28, 59, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    padding: 0;
+    /* Inicialmente escondida (-100% no eixo Y) */
+    transform: translateY(-100%);
+}
+
+.top-navbar.visible {
+    transform: translateY(0);
+}
+
+/* Container interno para conteúdo centralizado */
+.top-navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 30px;
+}
+
+/* Estilo do logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.logo a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #10b5ce;
+    transition: width 0.3s ease;
+}
+
+.logo a:hover {
+    color: #10b5ce;
+}
+
+.logo a:hover::after {
+    width: 100%;
+}
+
+/* Estilos modernos para ícones sociais */
+.social-icons-navbar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icon-link {
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: rgba(16, 181, 206, 0.15);
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.social-icon-link:hover {
+    color: #10b5ce;
+    transform: translateY(-3px);
+    background-color: rgba(16, 181, 206, 0.25);
+    box-shadow: 0 5px 15px rgba(16, 181, 206, 0.3);
+}
+
+/* Garante que nenhum link na navbar tenha sublinhado */
+.top-navbar a {
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .top-navbar-content {
+        padding: 12px 20px;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .social-icons-navbar {
+        gap: 15px;
+    }
+    
+    .social-icon-link {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-navbar-content {
+        padding: 10px 15px;
+    }
+    
+    .social-icons-navbar {
+        gap: 10px;
+    }
+    
+    .social-icon-link {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+}

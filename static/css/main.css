@@ -1,0 +1,163 @@
+/* Estilos gerais e compartilhados */
+
+/* Reset e Estilos Básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #051c3b;
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar e Menu */
+.sidebar {
+    width: 200px;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background-color: #051c3b;
+}
+
+.menu {
+    list-style: none;
+    width: 100%;
+}
+
+.menu li {
+    margin-bottom: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    padding: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu a.active {
+    color: #10b5ce;
+    font-weight: bold;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #10b5ce;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after, .menu a.active::after {
+    width: 100%;
+}
+
+/* Conteúdo principal */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos comuns para seções */
+.section {
+    margin-bottom: 100px;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    scroll-margin-top: 100px; /* Margem de rolagem para cada seção */
+    padding-top: 20px; /* Espaço extra no topo de cada seção */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(5, 28, 59, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}
+
+.copyright {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+        position: relative;
+        height: auto;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .menu li {
+        margin-bottom: 0;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .social-icons {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .social-icons a {
+        font-size: 20px;
+    }
+}

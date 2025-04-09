@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Fiche - Certificates</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/certificates.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/top-navbar.css">
+    <link rel="stylesheet" href="../static/css/certificates.css">
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -14,40 +15,55 @@
     <!-- Barra de navegação superior (sempre visível) -->
     <nav class="top-navbar visible" id="top-navbar">
         <div class="top-navbar-content">
-            <div class="logo"><a href="index.html">Lucas Fiche</a></div>
-            <div class="social-icons">
-                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <div class="logo">
+                <a href="index.html">Lucas Fiche</a>
+            </div>
+            <div class="social-icons-navbar">
+                <a href="mailto:seu-email@exemplo.com" class="social-icon-link" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://instagram.com/seuperfil" class="social-icon-link" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/seuperfil" class="social-icon-link" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/seuperfil" class="social-icon-link" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
             </div>
         </div>
     </nav>
 
     <div class="certificates-container-main">
         <!-- Seção Certificates -->
-        <section class="section certificates-section">
-            <h2 class="section-title">Certificates</h2>
-            <div class="back-button-container">
-                <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
+        <section class="certificates-section">
+            <div class="section-header">
+                <div class="back-button-container">
+                    <!-- Usando o caminho correto baseado na estrutura do projeto -->
+                    <a href="./index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
+                </div>
+                <h2 class="section-title">Certificates</h2>
             </div>
+            
             <div class="certificates-container">
+                <!-- Certificate items remain unchanged -->
                 <div class="certificate-item">
                     <h3 class="certificate-title">Sprint IDP</h3>
                     <div class="certificate-card">
                         <div class="certificate-image">
-                            <img src="images/certificado.jpg" alt="Sprint IDP Certificate">
-                            <a href="https://drive.google.com/file/d/1dWokumprb24DPOuAU9AZ4ZoEM9btRe9T/view?usp=sharing" class="certificate-link" aria-label="View certificate"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <img src="../static/img/certificates/cert1.jpg" alt="Sprint IDP Certificate">
+                            <a href="#" class="certificate-link" aria-label="View certificate"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="certificate-item">
-                    <h3 class="certificate-title">Vencedor Sprint IDP</h3>
+                    <h3 class="certificate-title">Curso Alura</h3>
                     <div class="certificate-card">
                         <div class="certificate-image">
-                            <img src="images/certificado_sprint_vencedor.png" alt="Curso Alura Certificate">
-                            <a href="https://drive.google.com/file/d/1DMd5BxxK-udM1c5YI2sXwkzVo7uqQekb/view?usp=sharing" class="certificate-link" aria-label="View certificate"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <img src="../static/img/certificates/cert2.jpg" alt="Curso Alura Certificate">
+                            <a href="#" class="certificate-link" aria-label="View certificate"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
                 </div>
@@ -56,7 +72,7 @@
                     <h3 class="certificate-title">Web Development</h3>
                     <div class="certificate-card">
                         <div class="certificate-image">
-                            <img src="/api/placeholder/400/320" alt="Web Development Certificate">
+                            <img src="../static/img/certificates/cert3.jpg" alt="Web Development Certificate">
                             <a href="#" class="certificate-link" aria-label="View certificate"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
@@ -66,7 +82,7 @@
                     <h3 class="certificate-title">AWS Cloud Practitioner</h3>
                     <div class="certificate-card">
                         <div class="certificate-image">
-                            <img src="/api/placeholder/400/320" alt="AWS Certificate">
+                            <img src="../static/img/certificates/cert4.jpg" alt="AWS Certificate">
                             <a href="#" class="certificate-link" aria-label="View certificate"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
@@ -83,6 +99,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/certificates.js"></script>
+    <script src="../static/js/certificates.js"></script>
 </body>
 </html>

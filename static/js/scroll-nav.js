@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Script para destacar o menu conforme o scroll
+// Script para navegação e efeitos de scroll
+
+function initScrollNav() {
     const sections = document.querySelectorAll('section');
     const menuLinks = document.querySelectorAll('.menu a');
     const topNavbar = document.getElementById('top-navbar');
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Função para atualizar o menu ativo durante o scroll
     function activeMenu() {
         // Encontra a seção atual
         let current = '';
@@ -72,28 +74,24 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Mostra/esconde a barra de navegação superior
         if (window.scrollY > 150) {
-            topNavbar.classList.add('visible');
+            if (topNavbar) {
+                topNavbar.classList.add('visible');
+            }
         } else {
-            topNavbar.classList.remove('visible');
+            if (topNavbar) {
+                topNavbar.classList.remove('visible');
+            }
         }
     }
     
-    // Sempre ativar o scroll listener
-    window.addEventListener('scroll', activeMenu);
+    // Usar debounce para melhorar a performance durante o scroll
+    const debouncedActiveMenu = typeof debounce === 'function' ? 
+                              debounce(activeMenu, 10) : 
+                              activeMenu;
     
-    // Animação de digitação
-    const text = "Computer Science Student at IDP and Systems Analysis and Development Student at IESB";
-    const typedTitle = document.getElementById('typed-title');
-    let i = 0;
+    // Ativar o listener de scroll
+    window.addEventListener('scroll', debouncedActiveMenu);
     
-    function typeWriter() {
-        if (i < text.length) {
-            typedTitle.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50); // velocidade da digitação (ms)
-        }
-    }
-    
-    // Iniciar animação de digitação após 500ms
-    setTimeout(typeWriter, 500);
-});
+    // Executar uma vez para definir o menu ativo inicial
+    activeMenu();
+}

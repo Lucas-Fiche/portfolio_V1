@@ -1,0 +1,454 @@
+/* Estilos específicos para a página de certificados */
+
+/* Configurações gerais para página de certificados */
+.certificates-page {
+    background-color: #051c3b;
+    color: white;
+    padding-top: 70px; /* Espaço para a barra de navegação fixa */
+    min-height: 100vh; /* Altura mínima para garantir que o footer fique no final */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajustes para a barra de navegação na página de certificados */
+.certificates-page .top-navbar {
+    transform: translateY(0); /* Sempre visível na página de certificados */
+}
+
+/* Garantir que os estilos específicos da barra não serão afetados */
+.certificates-page .social-icons-navbar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.certificates-page .social-icon-link {
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: rgba(16, 181, 206, 0.15);
+}
+
+.certificates-page .social-icon-link:hover {
+    color: #10b5ce;
+    transform: translateY(-3px);
+    background-color: rgba(16, 181, 206, 0.25);
+    box-shadow: 0 5px 15px rgba(16, 181, 206, 0.3);
+}
+
+.certificates-page .logo a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.certificates-page .logo a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #10b5ce;
+    transition: width 0.3s ease;
+}
+
+.certificates-page .logo a:hover {
+    color: #10b5ce;
+}
+
+.certificates-page .logo a:hover::after {
+    width: 100%;
+}
+
+/* Título da seção */
+.certificates-section .section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+}
+
+.certificates-section .section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #10b5ce;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Certificates Section */
+.certificates-section {
+    padding: 20px 0 50px;
+}
+
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.certificate-item {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.certificate-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.certificate-title::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: #10b5ce;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+.certificate-card {
+    background-color: rgba(16, 53, 74, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-image {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.03);
+}
+
+.certificate-link {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(16, 181, 206, 0.9);
+    color: #051c3b;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-link:hover {
+    background-color: #051c3b;
+    color: #10b5ce;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito de destaque no certificado */
+.certificate-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(16, 181, 206, 0) 80%, rgba(16, 181, 206, 0.3) 100%);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.certificate-card:hover .certificate-image::before {
+    opacity: 1;
+}
+
+/* Garantir que a página de certificados esteja centralizada */
+
+/* Estrutura principal da página */
+.certificates-page {
+    background-color: #051c3b;
+    color: white;
+    padding-top: 70px; /* Espaço para a barra de navegação fixa */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+/* Container principal para certificados */
+.certificates-container-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+/* Seção de certificados */
+.certificates-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 0 50px;
+    text-align: center; /* Centraliza textos */
+}
+
+/* Título da seção */
+.certificates-section .section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+/* Linha decorativa sob o título */
+.certificates-section .section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #10b5ce;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Botão de voltar */
+.back-button-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Container de certificados */
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+/* Item de certificado individual */
+.certificate-item {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Section header com layout melhorado */
+.section-header {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container do botão voltar reposicionado */
+.back-button-container {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    text-align: left;
+    z-index: 2;
+}
+
+/* Estilização do botão voltar */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: #10b5ce;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: rgba(16, 181, 206, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito hover com animação */
+.back-button:hover {
+    background-color: rgba(16, 181, 206, 0.25);
+    transform: translateX(-5px);
+    box-shadow: 0 4px 12px rgba(16, 181, 206, 0.3);
+}
+
+/* Animação para o ícone */
+.back-button i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover i {
+    transform: translateX(-3px);
+}
+
+/* Efeito de onda no hover */
+.back-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(16, 181, 206, 0.3);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.back-button:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* Certifique-se de que o título da seção ainda está centralizado */
+.certificates-section .section-title {
+    margin-top: 10px;
+    position: relative;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .back-button-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .back-button:hover {
+        transform: translateY(-5px);
+    }
+    
+    .section-header {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) {
+    .certificates-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .certificates-container-main {
+        padding: 15px;
+    }
+    
+    .certificate-item {
+        max-width: 320px;
+    }
+}
+
+/* Responsividade para a página de certificados */
+@media (max-width: 992px) {
+    .certificates-section .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .certificates-container {
+        gap: 30px;
+    }
+    
+    .certificate-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .certificates-page {
+        padding-top: 60px;
+    }
+    
+    .certificates-section .section-title {
+        font-size: 2rem;
+    }
+    
+    .certificate-title {
+        font-size: 1.5rem;
+    }
+    
+    .certificates-container {
+        gap: 40px;
+    }
+    
+    .certificate-item {
+        max-width: 320px;
+    }
+}

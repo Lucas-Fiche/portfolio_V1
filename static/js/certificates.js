@@ -32,11 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Aqui você pode implementar a lógica para abrir o certificado em tamanho maior
-            // Por exemplo, abrir um lightbox ou redirecionar para uma página com a imagem em tamanho completo
+            // Obter a URL da imagem do certificado
+            const certificateImg = this.closest('.certificate-image').querySelector('img');
+            const certificateUrl = certificateImg.src;
             
-            // Para este exemplo, vamos apenas exibir um alerta
-            alert('Certificado será aberto em tamanho completo em uma implementação real.');
+            // Abrir em nova janela (poderia ser substituído por um lightbox)
+            window.open(certificateUrl, '_blank');
         });
     });
 });
