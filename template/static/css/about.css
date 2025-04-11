@@ -136,6 +136,8 @@
 
 .about-content {
     line-height: 1.7;
+    text-align: justify;
+    text-indent: 2em;
 }
 
 .about-content p {

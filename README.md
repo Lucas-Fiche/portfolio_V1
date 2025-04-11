@@ -57,5 +57,5 @@ Lucas Fiche
 ## Contato
 
 - Email: [seu-email@exemplo.com](mailto:lucas.fiche.u.borges@gmail.com)
-- LinkedIn: [linkedin.com/in/lucasfiche](https://linkedin.com/in/lucasfiche)
-- GitHub: [github.com/lucasfiche](https://github.com/lucasfiche)
+- LinkedIn: [linkedin.com/in/lucasfiche](#)
+- GitHub: [github.com/lucasfiche](https://github.com/Lucas-Fiche)
